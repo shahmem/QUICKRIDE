@@ -1,0 +1,56 @@
+import React, { useEffect, useState } from 'react'
+import logo from '../assets/images/logo.png'
+import user from '../assets/images/user.jpeg'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { Link, useNavigate } from 'react-router';
+
+
+function Navbar({scrollToSection,className}) {
+    const [isScrolled, setIsScrolled] = useState(false);
+    const[isOpen,setIsOpen] = useState(false);
+    const togglerBtn = () =>{
+        setIsOpen(!isOpen);
+    }
+
+  useEffect(() => {
+    const handleScroll = () => {
+      if (window.scrollY > 30) {
+        setIsScrolled(true);
+      } else {
+        setIsScrolled(false);
+      }
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+  const navigate =useNavigate();
+  return (
+    <>
+        <nav className={`flex fixed z-20 ${isScrolled && "bg-[#f5f5f5]" } ${className} transition-all duration-800 ease-in-out transform  md:px-8 p-3 items-center w-full justify-between`}>
+            <div>
+                <img className='w-24' src={logo} alt="logo" />
+            </div>
+            <div className='flex gap-40 text-xs font-bold'>
+                <div className='md:flex hidden gap-6  text-[#000000be] tracking-wide'>
+                    <Link to='/' className='hover:text-[#000000] uppercase px-3 py-1 '>Home</Link>
+                    <Link onClick={()=>{scrollToSection("about")}} className='hover:text-[#000000] uppercase px-3 py-1 '>About</Link> 
+                    <Link onClick={()=>{scrollToSection("contact")}} className='hover:text-[#000000] uppercase px-3 py-1 '>Contact</Link>
+                </div>
+                <div className='flex gap-3'>
+                     <div className='rounded-full w-7 md:w-8 border-[1px] bg-slate-300 hover:drop-shadow-[0px_0px_3px_rgba(0,0,0,0.3)] cursor-pointer'>
+                        <img src={user} onClick={()=>{navigate('profile')}} className='object-fill rounded-full' alt="" />
+                    </div>
+                    <button className='md:hidden' onClick={togglerBtn}>
+                        {isOpen ? '' : <FontAwesomeIcon icon={faBars} />}
+                    </button>
+                </div>
+               
+            </div>
+        </nav>
+    </>
+  )
+}
+
+export default Navbar
