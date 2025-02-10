@@ -1,5 +1,5 @@
 import React from 'react'
-import Home from '../RiderComponents/Home'
+import Home from '../RiderComponents/Pages/Home'
 import { Route, Routes } from 'react-router'
 import ProfileForm from '../RiderComponents/Components/ProfileForm'
 import BookForm from '../RiderComponents/Components/BookForm'
