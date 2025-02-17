@@ -3,12 +3,12 @@ import img from '../assets/images/drvr.jpeg'
 import { useNavigate } from 'react-router'
 
 
-function Ride({rideRef }) {
+function Ride() {
   const navigate =useNavigate();
   return (
     <>
     
-    <div ref={rideRef} className='flex flex-col md:flex-row p-6 md:justify-between md:pr-14 gap-5'>
+    <div className='flex flex-col md:flex-row p-6 md:justify-between md:pr-14 gap-5'>
           <div className='flex flex-col gap-4 md:pl-12 text-[#2d8873] md:w-1/2 font-bold  '>
             <h1 className='md:max-w-96 leading-[3.7rem] md:leading-[5rem] text-5xl md:text-6xl md:tracking-tight'>
             Your Journey, Always Our Priority!

@@ -6,7 +6,7 @@ function BookCmp(props) {
 
   return (
     <>
-        <div className='flex flex-col justify-between gap-3 flex-1 px-4 py-3 rounded-2xl bg-slate-200'>
+        <div className='flex flex-col justify-between gap-3 flex-1 px-4 py-3 rounded-2xl bg-slate-200 shadow-lg'>
           <div className='font-semibold'>{props.head}</div>
           <div className='text-sm tracking-[0.02em]'>{props.para}</div>
           <div className="w-full flex justify-end">

@@ -2,12 +2,12 @@ import React from 'react'
 import img3 from '../assets/images/images.jpeg'
 import { useNavigate } from 'react-router';
 
-function Drive({driveRef}) {
+function Drive() {
   const navigate =useNavigate();
 
   return (
     <>
-    <div ref={driveRef} className='flex flex-col md:flex-row p-6 md:justify-between md:pr-14 gap-5'>
+    <div className='flex flex-col md:flex-row p-6 md:justify-between md:pr-14 gap-5'>
         <div className='flex flex-col gap-4 md:pl-12 text-[#2d8873] md:w-1/2 font-bold  '>
           <h1 className='md:max-w-96 leading-[3.7rem] md:leading-[5rem] text-5xl md:text-6xl md:tracking-tight'>
           Drive when you want, make what you need

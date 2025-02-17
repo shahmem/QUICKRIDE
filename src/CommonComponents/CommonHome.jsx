@@ -9,23 +9,13 @@ import { useNavigate } from 'react-router'
 
 function CommonHome() {
   const navigate =useNavigate();
-  const rideRef = useRef(null);
-  const driveRef = useRef(null);
-  
-  const refs = {
-    rider: rideRef,
-    drive: driveRef,
-  };
-  const scrollToSection = (section) => {
-    refs[section]?.current?.scrollIntoView({ behavior: "smooth" });
-  };
   return (
     <>
-      <CommonNavbar scrollToSection={scrollToSection}/>
+      <CommonNavbar/>
       
       
       <div className='p-4'>
-        <Ride rideRef={rideRef} />
+        <Ride/>
         <div className='flex flex-col md:flex-row gap-8 md:gap-20 py-12 md:px-16 md:pt-20  justify-between'>
           <div className='flex-1 shadow shadow-[#267e69] font-semibold rounded-3xl px-8 py-5 flex flex-col justify-between space-y-5'>
             <h3 className='text-lg text-[#267e69]'>Ready to Ride</h3>
@@ -38,7 +28,7 @@ function CommonHome() {
             <a onClick={()=>{navigate('/signup', { state: { active: 'driver' }})}} className='bg-[#31977f] hover:bg-[#206d5b] text-white font-semibold text-xs tracking-wide py-2 px-5 rounded-3xl w-max' >Get Started</a>
           </div>
         </div>
-      <Drive driveRef={driveRef} />
+      <Drive />
       </div>
       <WhyQuickRide/>
       <CommonFooter/>
