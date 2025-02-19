@@ -3,6 +3,8 @@ import { useForm } from "react-hook-form";
 import Navbar from "./Navbar";
 import { useNavigate } from "react-router";
 import Profile from "./Profile";
+import img from '../../assets/images/img-bg.png'
+
 
 function ProfileForm() {
   const {
@@ -20,7 +22,7 @@ function ProfileForm() {
         const reader = new FileReader();
         reader.readAsDataURL(file);
         reader.onload = () => {
-          resolve(reader.result); // Return Base64 data
+          resolve(reader.result);
         };
       } else {
         resolve(null);
@@ -74,7 +76,7 @@ function ProfileForm() {
       {submitted ? 
       <Profile setSubmitted={setSubmitted} />
       :
-      <div className=" bg-sky-100 p-4 pt-24 md:px-24 py-12">
+      <div style={{backgroundImage: `url(${img})`, backgroundSize: "cover"}} className=" bg-sky-100 p-4 pt-24 md:px-24 py-12">
         <div className="pb-12 ">
           <h2 className="text-2xl font-semibold  text-gray-800">
             Profile Details :

@@ -13,6 +13,14 @@ function Signup() {
     handleSubmit,
     formState: { errors },
   } = useForm();
+  const onSubmit = (data) => {
+    try {
+      console.log(data);
+      
+    } catch (error) {
+      console.error("Failed to save data", error);
+    }
+  };
 
   return (
     <>
@@ -26,7 +34,7 @@ function Signup() {
                 <button onClick={()=>{navigate('/login')}} className='rounded-3xl font-light text-[10px] md:text-xs px-4 md:px-9 py-1 md:py-3 mt-3 md:mt-[10%] border-white border-[1px]'>SIGN IN</button>
             </div>
             <div className='h-full w-[80%] md:w-[63%] bg-[#fff] rounded-3xl md:rounded-none md:rounded-r-3xl'>
-                <form className='flex flex-col items-center pt-4 lg:pt-12 gap-3 md:gap-8'>
+                <form onSubmit={handleSubmit(onSubmit)} className='flex flex-col items-center pt-4 lg:pt-12 gap-3 md:gap-8'>
                     <p className='md:text-3xl lg:text-4xl font-bold text-[#3aad92] '>Create Account</p>
                     <div className='flex md:gap-1 bg-[#1a7c65] text-[10px] md:text-xs font-semibold text-white p-0.5 rounded-3xl'>
                         <p onClick={() => setActive("driver")} className={`  ${ active === "driver" ?"bg-[#a9fde9] text-[#1a7c65] rounded-3xl":"text-[#a9fde9]"} cursor-pointer px-3 md:px-5 py-1`}>Driver</p>
@@ -41,7 +49,7 @@ function Signup() {
                                 placeholder="Name"
                             />
                             {errors.name && (
-                                <p className="text-sm text-[#f53232] mt-1">{errors.name.message}</p>
+                                <p className="text-xs absolute text-[#f53232]">{errors.name.message}</p>
                             )}
                         </div>
                         <div className="">
@@ -58,7 +66,7 @@ function Signup() {
                                 placeholder="Email"
                             />
                             {errors.email && (
-                                <p className="text-sm text-[#f53232] mt-1">{errors.email.message}</p>
+                                <p className="text-xs absolute text-[#f53232]">{errors.email.message}</p>
                             )}
                          </div>
                          <div className="">
@@ -76,7 +84,7 @@ function Signup() {
                                 placeholder="Password"
                             />
                             {errors.password && (
-                            <p className="text-sm text-[#f53232] mt-1">{errors.password.message}</p>
+                            <p className="text-xs absolute text-[#f53232]">{errors.password.message}</p>
                             )}
                          </div>
                     </div>

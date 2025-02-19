@@ -107,6 +107,7 @@ function BookForm() {
                   <p className="block text-white">Do You Have a Vehicle?</p>
                   <div className="flex gap-3 mt-2">
                     <button
+                    type="button"
                       onClick={() => setHasVehicle(true)}
                       className={`px-4 text-sm py-1.5 bg-[#00000056] hover:bg-[#7e7e7ea1] text-white ${
                         hasVehicle ? "bg-[#eeeeeeb9] text-black" : ""
@@ -115,6 +116,7 @@ function BookForm() {
                       I Have
                     </button>
                     <button
+                    type="button"
                       onClick={() => setHasVehicle(false)}
                       className={`px-4 py-1.5 text-sm bg-[#00000056] hover:bg-[#7e7e7ea1] text-white ${
                         hasVehicle === false ? "bg-[#eeeeeeb9] text-black" : ""
