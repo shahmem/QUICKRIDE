@@ -6,7 +6,7 @@ import BookForm from '../RiderComponents/Components/BookForm'
 import Booking from '../RiderComponents/Components/Booking'
 import Chats from '../RiderComponents/Components/Chats'
 import History from '../RiderComponents/Components/History'
-import Transactrion from '../RiderComponents/Components/Transactrion'
+import Transaction from '../RiderComponents/Components/Transaction'
 
 function RiderRouter() {
   return (
@@ -18,7 +18,7 @@ function RiderRouter() {
             <Route path="/bookings" element={<Booking />} />
             <Route path="/chats" element={<Chats />} />
             <Route path="/history" element={<History />} />
-            <Route path="/transaction" element={<Transactrion />} />
+            <Route path="/transaction" element={<Transaction />} />
         </Routes> 
     </>
   )

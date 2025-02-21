@@ -12,7 +12,7 @@ function Requests() {
         <Sidebar/>
         <div className=' flex flex-col gap-3 p-20 pl-64 px-28'>
           <div>
-            <h3 className='text-xl font-semibold'>Your Rides :</h3>
+            <h3 className='text-xl font-semibold'>Requests :</h3>
           </div>
           <div className='flex gap-5 text-xs font-semibold'>
             <div className='bg-white px-2 py-1 rounded-md flex justify-between items-center gap-7 shadow'>Status <FontAwesomeIcon icon={faChevronDown} /></div>

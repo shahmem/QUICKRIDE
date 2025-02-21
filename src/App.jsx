@@ -10,9 +10,9 @@ function App() {
     <>
 
     <BrowserRouter>
-        {/* <RiderRouter/> */}
+        <RiderRouter/>
         {/* <CommonRouter/> */}
-        <DriverRouter/>
+        {/* <DriverRouter/> */}
     </BrowserRouter>
 
     </>

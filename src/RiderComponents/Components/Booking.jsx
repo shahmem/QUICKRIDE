@@ -2,14 +2,16 @@ import React from 'react'
 import Navbar from './Navbar'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faCalendarDays , faChevronDown, faClock, faLocationDot } from '@fortawesome/free-solid-svg-icons'
+import Sidebar from './Sidebar'
 
 function Booking() {
   return (
     <div className='bg-slate-100 h-screen'>
-        <Navbar className="bg-white" />
-        <div className=' flex flex-col gap-5 p-20 px-28'>
+        <Navbar className="bg-white z-20" />
+        <Sidebar/>
+        <div className=' flex flex-col gap-5 p-20 px-20 pl-56'>
           <div>
-            <h3>Your Bookings :</h3>
+            <h3 className='font-semibold'>Your Bookings :</h3>
           </div>
           <div className='flex gap-5 text-xs font-semibold'>
             <div className='bg-white px-2 py-1 rounded-md flex justify-between items-center gap-7 shadow'>Status <FontAwesomeIcon icon={faChevronDown} /></div>

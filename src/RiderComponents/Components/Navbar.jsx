@@ -30,7 +30,7 @@ function Navbar({scrollToSection,className,hover}) {
     <>
         <nav className={`flex fixed z-20 ${className} ${isScrolled && "bg-[#f5f5f5]" }  transition-all duration-700 ease-in-out transform  md:px-8 p-3 items-center w-full justify-between`}>
             <div>
-                <img className='w-24' src={logo} alt="logo" />
+                <img onClick={()=>{navigate('/')}} className='w-24 cursor-pointer' src={logo} alt="logo" />
             </div>
             <div className='flex gap-40 text-xs font-bold'>
                 <div className='md:flex hidden gap-6 tracking-wide'>
