@@ -88,12 +88,6 @@ function ProfileForm() {
                 Profile Details :
               </h2>
               <div className="space-y-4">
-                {/* {['First Name', 'Last Name', 'Mobile Number', 'Address', 'State', 'District', 'ZipCode'].map((field) => (
-              <input key={field} {...register(field.toLowerCase().replace(/ /g, '_'), { required: `${field} is required` })}
-                className="w-full px-3 py-1.5 border bg-[#2c2c2c4b] border-gray-300 rounded placeholder:text-[#ffffffd7] placeholder:text-sm"
-                placeholder={field}
-              />
-            ))} */}
                 <div className="flex flex-col">
                   <label>First Name :</label>
                   <input
@@ -237,8 +231,8 @@ function ProfileForm() {
                   <button
                     type="button"
                     onClick={() => setHasVehicle(true)}
-                    className={`px-4 text-sm py-1.5 bg-[#00000056] hover:bg-[#7e7e7ea1] ${
-                      hasVehicle ? "bg-[#eeeeeeb9] text-black" : " text-white"
+                    className={`px-4 text-sm py-1.5 bg-[#00000056] hover:bg-[#7e7e7ea1] text-white ${
+                      hasVehicle ? "bg-[#eeeeeeb9] text-black " : " "
                     } `}
                   >
                     I Have
@@ -259,7 +253,7 @@ function ProfileForm() {
             </div>
 
             {hasVehicle && (
-              <div className="w-[16rem] md:w-96 md:pt-6">
+              <div className="w-[16rem] md:w-96 md:pt-12">
                 <div className="space-y-4 flex flex-col gap-3">
                   <div className="flex flex-col">
                     <label>Registration Number :</label>
@@ -268,7 +262,7 @@ function ProfileForm() {
                         required: "Registration Number is required",
                       })}
                       type="tel"
-                      className="w-full px-3 py-1.5 border bg-[#2c2c2c4b] border-gray-300 rounded placeholder:text-[#ffffffd7] placeholder:text-sm"
+                      className="w-full px-3 py-1.5 border bg-[#2c2c2c4b] border-gray-300 rounded  placeholder:text-sm"
                       placeholder="Registration Number"
                     />
                     {errors.regNum && (
@@ -284,7 +278,7 @@ function ProfileForm() {
                         required: "Brand of vehicle is required",
                       })}
                       type="text"
-                      className="w-full px-3 py-1.5 border bg-[#2c2c2c4b] border-gray-300 rounded placeholder:text-[#ffffffd7] placeholder:text-sm"
+                      className="w-full px-3 py-1.5 border bg-[#2c2c2c4b] border-gray-300 rounded  placeholder:text-sm"
                       placeholder="Brand of vehicle"
                     />
                     {errors.brand && (
@@ -300,7 +294,7 @@ function ProfileForm() {
                         required: "Model (Varient) is required",
                       })}
                       type="text"
-                      className="w-full px-3 py-1.5 border bg-[#2c2c2c4b] border-gray-300 rounded placeholder:text-[#ffffffd7] placeholder:text-sm"
+                      className="w-full px-3 py-1.5 border bg-[#2c2c2c4b] border-gray-300 rounded  placeholder:text-sm"
                       placeholder="Model (Varient)"
                     />
                     {errors.model && (
@@ -316,7 +310,7 @@ function ProfileForm() {
                       min="1900"
                       max={new Date().getFullYear()}
                       type="tel"
-                      className="w-full px-3 py-1.5 border bg-[#2c2c2c4b] border-gray-300 rounded placeholder:text-[#ffffffd7] placeholder:text-sm"
+                      className="w-full px-3 py-1.5 border bg-[#2c2c2c4b] border-gray-300 rounded  placeholder:text-sm"
                       placeholder="Year"
                     />
                     {errors.year && (
