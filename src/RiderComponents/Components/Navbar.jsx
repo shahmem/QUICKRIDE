@@ -40,7 +40,7 @@ function Navbar({scrollToSection,className,hover}) {
                 </div>
                 <div className='flex gap-3'>
                      <div className='rounded-full w-7 md:w-8 border-[1px] bg-slate-300 hover:drop-shadow-[0px_0px_3px_rgba(0,0,0,0.3)] cursor-pointer'>
-                        <img src={user} onClick={()=>{navigate('profile')}} className='object-fill rounded-full' alt="" />
+                        <img src={user} onClick={()=>{navigate('/profile')}} className='object-fill rounded-full' alt="" />
                     </div>
                     <button className='md:hidden' onClick={togglerBtn}>
                         {isOpen ? '' : <FontAwesomeIcon icon={faBars} />}

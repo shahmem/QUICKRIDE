@@ -7,6 +7,7 @@ import Booking from '../RiderComponents/Components/Booking'
 import Chats from '../RiderComponents/Components/Chats'
 import History from '../RiderComponents/Components/History'
 import Transaction from '../RiderComponents/Components/Transaction'
+import ChatWindow from '../RiderComponents/Components/ChatWindow'
 
 function RiderRouter() {
   return (
@@ -17,6 +18,7 @@ function RiderRouter() {
             <Route path="/bookform" element={<BookForm />} />
             <Route path="/bookings" element={<Booking />} />
             <Route path="/chats" element={<Chats />} />
+            <Route path="/chatswindow" element={<ChatWindow />} />
             <Route path="/history" element={<History />} />
             <Route path="/transaction" element={<Transaction />} />
         </Routes> 
